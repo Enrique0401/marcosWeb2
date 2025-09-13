@@ -21,13 +21,21 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-center">
-                        <li class="nav-item"><a class="nav-link active text-danger fw-bold"
-                                th:href="@{/inicio}">Inicio</a>
+                        <li class="nav-item">
+                            <a class="nav-link" th:href="@{/inicio}" h:classappend="${currentPage == 'inicio' ? 'active text-danger fw-bold' : 'text-primary'}">Inicio</a>
                         </li>
-                        <li class="nav-item"><a class="nav-link text-primary" th:href="@{/galeria}">Galería</a></li>
-                        <li class="nav-item"><a class="nav-link text-primary" th:href="@{/empresa}">La Empresa</a></li>
-                        <li class="nav-item"><a class="nav-link text-primary" th:href="@{/servicios}">Servicios</a></li>
-                        <li class="nav-item"><a class="nav-link text-primary" th:href="@{/contacto}">Contacto</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link" th:href="@{/galeria}" h:classappend="${currentPage == 'galeria' ? 'active text-danger fw-bold' : 'text-primary'}">Galería</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" th:href="@{/empresa}" h:classappend="${currentPage == 'empresa' ? 'active text-danger fw-bold' : 'text-primary'}">La Empresa</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" th:href="@{/servicios}" h:classappend="${currentPage == 'servicios' ? 'active text-danger fw-bold' : 'text-primary'}">Servicios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" th:href="@{/contacto}" h:classappend="${currentPage == 'contacto' ? 'active text-danger fw-bold' : 'text-primary'}">Contacto</a>
+                        </li>
                     </ul>
                     <div class="dropdown ms-lg-3 mt-2 mt-lg-0 w-lg-auto text-center text-lg-start">
                         <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton"
