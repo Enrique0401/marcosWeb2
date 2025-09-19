@@ -95,6 +95,37 @@ footer .d-flex {
     justify-content: center;
 }
 
+
+:root {
+    --bs-primary: #0F3B63;
+    --bs-danger: #C1272D;
+    --bs-dark: #3A3A3A;
+    --bs-light: #FFFFFF;
+  }
+  
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: var(--bs-light);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--bs-primary);
+    border-radius: 5px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--bs-danger);
+  }
+  
+  html {
+    scrollbar-width: thin;
+    scrollbar-color: var(--bs-primary) var(--bs-light);
+  }
+  
+
 @media (max-width: 767px) {
     .navbar {
         display: flex;
