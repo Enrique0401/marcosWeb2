@@ -8,13 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class InicioControlador {
 
-    @GetMapping("/")
-    public String iniciar(Model model){
-        model.addAttribute("currentPage", "inicio");
-        return "index";
-    }
-
-    @GetMapping("/inicio")
+    @GetMapping({"/inicio", "/"})
     public String index(Model model){
         model.addAttribute("currentPage", "inicio");
         return "index";
