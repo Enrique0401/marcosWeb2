@@ -101,30 +101,30 @@ footer .d-flex {
     --bs-danger: #C1272D;
     --bs-dark: #3A3A3A;
     --bs-light: #FFFFFF;
-  }
-  
-  ::-webkit-scrollbar {
+}
+
+::-webkit-scrollbar {
     width: 10px;
-  }
-  
-  ::-webkit-scrollbar-track {
+}
+
+::-webkit-scrollbar-track {
     background: var(--bs-light);
-  }
-  
-  ::-webkit-scrollbar-thumb {
+}
+
+::-webkit-scrollbar-thumb {
     background-color: var(--bs-primary);
     border-radius: 5px;
-  }
-  
-  ::-webkit-scrollbar-thumb:hover {
+}
+
+::-webkit-scrollbar-thumb:hover {
     background: var(--bs-danger);
-  }
-  
-  html {
+}
+
+html {
     scrollbar-width: thin;
     scrollbar-color: var(--bs-primary) var(--bs-light);
-  }
-  
+}
+
 
 @media (max-width: 767px) {
     .navbar {

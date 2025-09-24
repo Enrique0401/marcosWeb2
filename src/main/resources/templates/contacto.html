@@ -9,6 +9,7 @@
     <link rel="icon" href="../img/logo.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" th:href="@{/css/styles.css}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
 </head>
 
 <body>
@@ -24,34 +25,35 @@
     <section class="py-5">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 mb-5 mb-lg-0">
-                    <div class="card shadow-sm">
+                <!-- Formulario -->
+                <div class="col-lg-8 mb-5 mb-lg-0" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="card shadow-sm" data-aos="zoom-in" data-aos-delay="200">
                         <div class="card-body p-4">
-                            <h3 class="fw-bold mb-4">Envíenos un mensaje</h3>
-                            <form id="contactForm">
+                            <h3 class="fw-bold mb-4" data-aos="fade-down">Envíenos un mensaje</h3>
+                            <form id="contactForm" data-aos="fade-up" data-aos-delay="300">
                                 <div class="row">
-                                    <div class="col-md-6 mb-3">
+                                    <div class="col-md-6 mb-3" data-aos="fade-up" data-aos-delay="400">
                                         <label for="nombre" class="form-label">Nombre completo</label>
                                         <input type="text" class="form-control" id="nombre" required>
                                     </div>
-                                    <div class="col-md-6 mb-3">
+                                    <div class="col-md-6 mb-3" data-aos="fade-up" data-aos-delay="500">
                                         <label for="empresa" class="form-label">Empresa / Institución</label>
                                         <input type="text" class="form-control" id="empresa">
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-md-6 mb-3">
+                                    <div class="col-md-6 mb-3" data-aos="fade-up" data-aos-delay="600">
                                         <label for="email" class="form-label">Email</label>
                                         <input type="email" class="form-control" id="email" required>
                                     </div>
-                                    <div class="col-md-6 mb-3">
+                                    <div class="col-md-6 mb-3" data-aos="fade-up" data-aos-delay="700">
                                         <label for="telefono" class="form-label">Teléfono</label>
                                         <input type="tel" class="form-control" id="telefono" required
                                             pattern="9[0-9]{8}"
                                             title="El número debe comenzar con 9 y tener 9 dígitos en total (Ej: 987654321)">
                                     </div>
                                 </div>
-                                <div class="mb-3">
+                                <div class="mb-3" data-aos="fade-up" data-aos-delay="800">
                                     <label for="servicio" class="form-label">Servicio de interés</label>
                                     <select class="form-select" id="servicio">
                                         <option selected>Seleccione un servicio...</option>
@@ -61,33 +63,40 @@
                                         <option value="cotizacion">Cotización General</option>
                                     </select>
                                 </div>
-                                <div class="mb-3">
+                                <div class="mb-3" data-aos="fade-up" data-aos-delay="900">
                                     <label for="mensaje" class="form-label">Mensaje</label>
                                     <textarea class="form-control" id="mensaje" rows="5" required></textarea>
                                 </div>
-                                <button type="submit" class="btn btn-primary btn-lg">Enviar mensaje</button>
+                                <button type="submit" class="btn btn-primary btn-lg" data-aos="zoom-in"
+                                    data-aos-delay="1000">
+                                    Enviar mensaje
+                                </button>
                             </form>
 
-                            <div id="successMessage" class="alert alert-success mt-4" style="display: none;">
+                            <div id="successMessage" class="alert alert-success mt-4" style="display: none;"
+                                data-aos="fade-in" data-aos-delay="1100">
                                 ¡Mensaje recibido! Nos pondremos en contacto contigo pronto.
                             </div>
                         </div>
                     </div>
                 </div>
 
+                <!-- Información de contacto -->
                 <div class="col-lg-4">
-                    <div class="card shadow-sm mb-4 text-center p-4">
+                    <div class="card shadow-sm mb-4 text-center p-4" data-aos="flip-left" data-aos-duration="1000">
                         <i class="bi bi-geo-alt display-4 text-primary mb-3"></i>
                         <h5 class="fw-bold">Ubicación</h5>
                         <p class="text-muted">CALLE. 21 DE OCTUBRE #1349<br>FLORENCIA DE MORA - TRUJILLO</p>
                     </div>
-                    <div class="card shadow-sm mb-4 text-center p-4">
+                    <div class="card shadow-sm mb-4 text-center p-4" data-aos="flip-up" data-aos-duration="1000"
+                        data-aos-delay="200">
                         <i class="bi bi-telephone display-4 text-primary mb-3"></i>
                         <h5 class="fw-bold">Teléfono</h5>
                         <p class="text-muted">924 353 323</p>
                         <a href="tel:950515954" class="btn btn-outline-primary">Llamar ahora</a>
                     </div>
-                    <div class="card shadow-sm text-center p-4">
+                    <div class="card shadow-sm text-center p-4" data-aos="flip-right" data-aos-duration="1000"
+                        data-aos-delay="400">
                         <i class="bi bi-envelope display-4 text-primary mb-3"></i>
                         <h5 class="fw-bold">Email</h5>
                         <p class="text-muted">info@moroniscrl.com</p>
@@ -101,30 +110,52 @@
     <section class="py-5 bg-light">
         <div class="container">
             <div class="text-center mb-4">
-                <h2 class="fw-bold">Nuestra Ubicación</h2>
-                <p class="text-muted">Encuéntrenos fácilmente en Florencia de Mora - Trujillo</p>
+                <!-- Título entra desde arriba -->
+                <h2 class="fw-bold" data-aos="fade-down" data-aos-duration="1000">
+                    Nuestra Ubicación
+                </h2>
+
+                <!-- Subtítulo aparece con zoom -->
+                <p class="text-muted" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="1000">
+                    Encuéntrenos fácilmente en Florencia de Mora - Trujillo
+                </p>
             </div>
-            <div class="card shadow-sm">
+
+            <div class="card shadow-sm" data-aos="flip-left" data-aos-delay="600" data-aos-duration="1200">
                 <div class="card-body p-0">
-                    <div class="ratio ratio-16x9">
+
+                    <!-- Mapa entra desde abajo -->
+                    <div class="ratio ratio-16x9" data-aos="fade-up" data-aos-delay="900" data-aos-duration="1200">
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.883365039986!2d-79.0402679250197!3d-8.086391680517366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91ad3d7b2c8a7c1f%3A0x5e32fa9b5e2c7b0d!2sFlorencia%20de%20Mora%2C%20Trujillo!5e0!3m2!1ses!2spe!4v1699299999999!5m2!1ses!2spe"
-                            style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                            style="border:0;" allowfullscreen="" loading="lazy">
+                        </iframe>
                     </div>
+
                 </div>
             </div>
         </div>
     </section>
+    
 
     <section class="py-5">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-8">
-                    <div class="card shadow-sm">
+                    <!-- Tarjeta entra con zoom -->
+                    <div class="card shadow-sm" data-aos="zoom-in" data-aos-duration="1000">
                         <div class="card-body p-4">
-                            <h3 class="fw-bold text-center mb-4">Horario de Atención</h3>
+
+                            <!-- Título baja suavemente -->
+                            <h3 class="fw-bold text-center mb-4" data-aos="fade-down" data-aos-delay="200"
+                                data-aos-duration="1000">
+                                Horario de Atención
+                            </h3>
+
                             <div class="row">
-                                <div class="col-md-6">
+                                <!-- Lista aparece con efecto desde la izquierda -->
+                                <div class="col-md-6" data-aos="fade-right" data-aos-delay="400"
+                                    data-aos-duration="1000">
                                     <ul class="list-group list-group-flush">
                                         <li class="list-group-item d-flex justify-content-between border-0">
                                             Lunes a Viernes
@@ -140,13 +171,22 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <div class="col-md-6 text-center">
+
+                                <!-- Icono y texto entran desde la derecha -->
+                                <div class="col-md-6 text-center" data-aos="fade-left" data-aos-delay="600"
+                                    data-aos-duration="1000">
                                     <i class="bi bi-clock-history display-4 text-primary mb-3"></i>
                                     <p class="text-muted">Para emergencias fuera de horario, contáctenos por teléfono
                                     </p>
-                                    <a href="tel:993766148" class="btn btn-outline-primary">Llamar emergencias</a>
+
+                                    <!-- Botón con efecto zoom al entrar -->
+                                    <a href="tel:993766148" class="btn btn-outline-primary" data-aos="zoom-in"
+                                        data-aos-delay="800" data-aos-duration="1000">
+                                        Llamar emergencias
+                                    </a>
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </div>
@@ -156,22 +196,40 @@
 
     <section class="py-5">
         <div class="container text-center">
-            <h2 class="fw-bold mb-4 text-primary">¿Listo para comenzar?</h2>
-            <p class="lead mb-4 text-muted">Contáctenos hoy mismo para una evaluación sin costo de sus necesidades</p>
-            <a href="tel:924353323" class="btn btn-primary btn-lg me-2" target="_blank">
+            <!-- Título con zoom -->
+            <h2 class="fw-bold mb-4 text-primary" data-aos="zoom-in" data-aos-duration="800">
+                ¿Listo para comenzar?
+            </h2>
+
+            <!-- Texto con fade-up -->
+            <p class="lead mb-4 text-muted" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+                Contáctenos hoy mismo para una evaluación sin costo de sus necesidades
+            </p>
+
+            <!-- Botón de llamada desde la izquierda -->
+            <a href="tel:924353323" class="btn btn-primary btn-lg me-2" target="_blank" data-aos="fade-right"
+                data-aos-delay="400" data-aos-duration="1000">
                 <i class="bi bi-telephone"></i> Llamar ahora
             </a>
-            <a href="https://wa.me/51924353323" class="btn btn-success btn-lg" target="_blank">
+
+            <!-- Botón de WhatsApp desde la derecha -->
+            <a href="https://wa.me/51924353323" class="btn btn-success btn-lg" target="_blank" data-aos="fade-left"
+                data-aos-delay="600" data-aos-duration="1000">
                 <i class="bi bi-whatsapp"></i> WhatsApp
             </a>
         </div>
     </section>
+
 
     <div th:replace="reusables :: flechita"></div>
 
     <div th:replace="reusables :: footer"></div>
 
     <script src="../js/main.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+    <script th:src="@{/js/aos-init.js}"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
