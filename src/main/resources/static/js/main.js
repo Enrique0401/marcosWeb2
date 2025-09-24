@@ -61,16 +61,26 @@ scrollToTopBtn.addEventListener('click', function () {
 
 //Contacto mensaje
 document.addEventListener('DOMContentLoaded', function () {
-    document.getElementById('contactForm').addEventListener('submit', function (event) {
-        event.preventDefault();
+    const form = document.getElementById('contactForm');
+    const successMessage = document.getElementById('successMessage');
 
-        const successMessage = document.getElementById('successMessage');
-        successMessage.style.display = 'block';
+    form.addEventListener('submit', function (event) {
+        event.preventDefault(); // evita recarga SIEMPRE
 
-        document.getElementById('contactForm').reset();
+        if (!form.checkValidity()) {
+            // Si el formulario es inválido -> mostrar errores Bootstrap
+            event.stopPropagation();
+            form.classList.add('was-validated');
+        } else {
+            // Si es válido -> mostrar mensaje, resetear, ocultar en 5s
+            successMessage.style.display = 'block';
 
-        setTimeout(function () {
-            successMessage.style.display = 'none';
-        }, 3000);
+            setTimeout(function () {
+                successMessage.style.display = 'none';
+            }, 5000);
+
+            form.reset();
+            form.classList.remove('was-validated');
+        }
     });
 });
