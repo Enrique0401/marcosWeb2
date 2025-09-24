@@ -20,7 +20,7 @@ function redirectInicio(event) {
         return;
     }
 
-    window.location.href = "../index.html";
+    window.location.href = "inicio";
 }
 
 
@@ -38,7 +38,7 @@ function togglePassword() {
 
 function redirectIndex(event) {
     event.preventDefault();
-    window.location.href = "../index.html";
+    window.location.href = "inicio";
 }
 
 //flechita

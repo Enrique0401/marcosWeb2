@@ -12,7 +12,8 @@
 
 <body>
     <div th:fragment="header">
-        <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm"
+            style="position: fixed; width: 100%; z-index: 1000;">
             <div class="container">
                 <a class="navbar-brand d-flex align-items-center fw-bold text-primary" th:href="@{/inicio}">
                     <img th:src="@{/img/logo.png}" alt="Logo de la empresa" class="me-2"
@@ -68,9 +69,8 @@
                 </div>
             </div>
         </nav>
+        <div style="height: 50px; background-color: transparent;"></div>
     </div>
-
-
 
     <div th:fragment="footer">
         <footer class="bg-dark text-light py-4">
