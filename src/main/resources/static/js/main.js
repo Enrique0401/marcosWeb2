@@ -38,7 +38,7 @@ function togglePassword() {
 
 function redirectIndex(event) {
     event.preventDefault();
-    window.location.href = "inicio";
+    window.location.href = "proyectos";
 }
 
 //flechita
