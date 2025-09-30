@@ -85,15 +85,3 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-
-document.addEventListener("DOMContentLoaded", function () {
-    const form = document.getElementById("solicitudForm");
-
-    if (form) {
-        form.addEventListener("submit", function (e) {
-            e.preventDefault();  // Evita el envío real del formulario
-            form.reset();        // Limpia todos los campos
-            location.reload();   // Recarga la página
-        });
-    }
-});
