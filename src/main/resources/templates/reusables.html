@@ -124,7 +124,61 @@
         <div style="height: 50px; background-color: transparent;"></div>
     </div>
 
-    <div th:fragment="footer">
+    <div th:fragment="footer_usuario">
+        <footer class="bg-dark text-light py-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 mb-4 mb-lg-0">
+                        <h5 class="fw-bold mb-3">Servicios Moroni SCRL</h5>
+                        <p>Panel de usuario para gestionar proyectos, incidencias y seguimiento en tiempo real.</p>
+                    </div>
+                    <div class="col-lg-4 mb-4 mb-lg-0">
+                        <h5 class="fw-bold mb-3">Enlaces rápidos</h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><a th:href="@{/perfil}" class="text-light text-decoration-none">Perfil</a>
+                            </li>
+                            <li class="mb-2"><a th:href="@{/proyectos}" class="text-light text-decoration-none">Mis
+                                    Proyectos</a></li>
+                            <li class="mb-2"><a th:href="@{/solicitar}"
+                                    class="text-light text-decoration-none">Solicitar Proyecto</a></li>
+                            <li class="mb-2"><a th:href="@{/seguimiento}"
+                                    class="text-light text-decoration-none">Seguimiento</a></li>
+                            <li class="mb-2"><a th:href="@{/incidencias}"
+                                    class="text-light text-decoration-none">Incidencias</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4">
+                        <h5 class="fw-bold mb-3">Soporte</h5>
+                        <p><i class="bi bi-envelope me-2"></i> soporte@serviciosmoroni.com</p>
+                        <h5 class="fw-bold mb-3">Contáctenos</h5>
+                        <p><i class="bi bi-telephone me-2"></i> 924 353 323</p>
+                        <div class="d-flex social-icons mt-3">
+                            <a href="https://www.facebook.com/profile.php?id=61555686907576" target="_blank"
+                                rel="noopener noreferrer" class="text-light me-3">
+                                <i class="bi bi-facebook fs-4"></i>
+                            </a>
+                            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"
+                                class="text-light me-3">
+                                <i class="bi bi-instagram fs-4"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/julio-nunja-alfaro-b2905b1b9/" target="_blank"
+                                rel="noopener noreferrer" class="text-light">
+                                <i class="bi bi-linkedin fs-4"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="my-4">
+
+                <div class="text-center">
+                    <p class="mb-0">Servicios Moroni SCRL - Panel de Usuario © 2025</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+    <div th:fragment="footer_general">
         <footer class="bg-dark text-light py-4">
             <div class="container">
                 <div class="row">
@@ -181,59 +235,6 @@
         </footer>
     </div>
 
-    <div th:fragment="footer-usuario">
-        <footer class="bg-dark text-light py-4">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4 mb-4 mb-lg-0">
-                        <h5 class="fw-bold mb-3">Servicios Moroni SCRL</h5>
-                        <p>Panel de usuario para gestionar proyectos, incidencias y seguimiento en tiempo real.</p>
-                    </div>
-                    <div class="col-lg-4 mb-4 mb-lg-0">
-                        <h5 class="fw-bold mb-3">Enlaces rápidos</h5>
-                        <ul class="list-unstyled">
-                            <li class="mb-2"><a th:href="@{/perfil}" class="text-light text-decoration-none">Perfil</a>
-                            </li>
-                            <li class="mb-2"><a th:href="@{/proyectos}" class="text-light text-decoration-none">Mis
-                                    Proyectos</a></li>
-                            <li class="mb-2"><a th:href="@{/solicitar}"
-                                    class="text-light text-decoration-none">Solicitar Proyecto</a></li>
-                            <li class="mb-2"><a th:href="@{/seguimiento}"
-                                    class="text-light text-decoration-none">Seguimiento</a></li>
-                            <li class="mb-2"><a th:href="@{/incidencias}"
-                                    class="text-light text-decoration-none">Incidencias</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-4">
-                        <h5 class="fw-bold mb-3">Soporte</h5>
-                        <p><i class="bi bi-envelope me-2"></i> soporte@serviciosmoroni.com</p>
-                        <h5 class="fw-bold mb-3">Contáctenos</h5>
-                        <p><i class="bi bi-telephone me-2"></i> 924 353 323</p>
-                        <div class="d-flex social-icons mt-3">
-                            <a href="https://www.facebook.com/profile.php?id=61555686907576" target="_blank"
-                                rel="noopener noreferrer" class="text-light me-3">
-                                <i class="bi bi-facebook fs-4"></i>
-                            </a>
-                            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"
-                                class="text-light me-3">
-                                <i class="bi bi-instagram fs-4"></i>
-                            </a>
-                            <a href="https://www.linkedin.com/in/julio-nunja-alfaro-b2905b1b9/" target="_blank"
-                                rel="noopener noreferrer" class="text-light">
-                                <i class="bi bi-linkedin fs-4"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <hr class="my-4">
-
-                <div class="text-center">
-                    <p class="mb-0">Servicios Moroni SCRL - Panel de Usuario © 2025</p>
-                </div>
-            </div>
-        </footer>
-    </div>
 
 
 
