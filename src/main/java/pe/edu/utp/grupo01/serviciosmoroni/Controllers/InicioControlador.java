@@ -3,11 +3,12 @@ package pe.edu.utp.grupo01.serviciosmoroni.Controllers;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 public class InicioControlador {
 
-    @GetMapping({ "/inicio", "/" , ""})
+    @GetMapping({ "/inicio", "/", "" })
     public String index(Model model) {
         model.addAttribute("currentPage", "inicio");
         return "index";
@@ -61,6 +62,11 @@ public class InicioControlador {
         return "solicitar";
     }
 
+    @PostMapping("/solicitar")
+    public String procesarSolicitud() {
+        return "redirect:/solicitar";
+    }
+
     @GetMapping("/seguimiento")
     public String seguimiento(Model model) {
         model.addAttribute("currentPage", "seguimiento");
@@ -76,6 +82,7 @@ public class InicioControlador {
     @GetMapping({ "/perfil", "/", "" })
     public String perfil(Model model) {
         model.addAttribute("currentPage", "perfil");
-        return "perfil"; 
+        return "perfil";
     }
+
 }

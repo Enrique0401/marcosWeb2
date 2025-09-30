@@ -13,7 +13,6 @@
 
 <body class="bg-light">
 
-    <!-- Header -->
     <div th:replace="reusables :: header-usuario"></div>
 
     <div class="container mt-5 my-4">
@@ -22,6 +21,9 @@
         </h2>
         <div class="card shadow-sm border-0">
             <div class="card-body">
+                <div class="scroll-hint">
+                    👉 Desliza la tabla para ver toda la información
+                </div>
                 <div class="table-responsive">
                     <table class="table table-hover align-middle">
                         <thead class="table-primary text-center">
@@ -48,7 +50,7 @@
                                 </td>
                                 <td class="text-center">01/10/2025</td>
                                 <td class="text-center">
-                                    <a th:href="@{/seguimiento/001}" class="btn btn-sm btn-outline-primary">
+                                    <a th:href="seguimiento" class="btn btn-sm btn-outline-primary">
                                         <i class="bi bi-eye"></i> Ver
                                     </a>
                                 </td>
@@ -66,7 +68,7 @@
                                 </td>
                                 <td class="text-center">30/10/2025</td>
                                 <td class="text-center">
-                                    <a th:href="@{/seguimiento/002}" class="btn btn-sm btn-outline-primary">
+                                    <a th:href="@{#}" class="btn btn-sm btn-outline-primary">
                                         <i class="bi bi-eye"></i> Ver
                                     </a>
                                 </td>
@@ -84,7 +86,7 @@
                                 </td>
                                 <td class="text-center">05/09/2025</td>
                                 <td class="text-center">
-                                    <a th:href="@{/seguimiento/003}" class="btn btn-sm btn-outline-primary">
+                                    <a th:href="@{#}" class="btn btn-sm btn-outline-primary">
                                         <i class="bi bi-eye"></i> Ver
                                     </a>
                                 </td>

@@ -95,14 +95,6 @@ footer .d-flex {
     justify-content: center;
 }
 
-
-:root {
-    --bs-primary: #0F3B63;
-    --bs-danger: #C1272D;
-    --bs-dark: #3A3A3A;
-    --bs-light: #FFFFFF;
-}
-
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -205,5 +197,142 @@ html {
 
     footer .d-flex {
         justify-content: center;
+    }
+}
+
+/* Tablas */
+/* 📊 Contenedor de tablas responsivas */
+/* 📊 Contenedor de tablas responsivas */
+.table-responsive {
+    position: relative;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: 8px;
+    background: var(--bs-light);
+}
+
+/* 👆 Indicador de scroll en móviles */
+.table-responsive::before {
+    content: "👉 Desliza horizontalmente para ver toda la tabla";
+    position: absolute;
+    top: -28px;
+    left: 0;
+    font-size: 0.9rem;
+    color: var(--bs-dark);
+    display: none;
+    animation: pulse 2.5s infinite;
+}
+
+/* ✨ Animación sutil en el mensaje */
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 0.6;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+/* ✅ Mostrar mensaje solo en pantallas pequeñas */
+@media (max-width: 768px) {
+    .table-responsive::before {
+        display: block;
+    }
+
+    .table-responsive {
+        border: 2px dashed rgba(15, 59, 99, 0.2);
+        padding-bottom: 10px;
+    }
+}
+
+/* 📌 Sticky header (encabezado fijo) */
+.table thead th {
+    position: sticky;
+    top: 0;
+    background: var(--bs-primary);
+    color: var(--bs-light);
+    z-index: 5;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+/* 🧹 Hover para filas */
+.table tbody tr:hover {
+    background: rgba(15, 59, 99, 0.05);
+    transition: background 0.2s ease-in-out;
+}
+
+/* 📊 Scrollbar personalizado */
+.table-responsive::-webkit-scrollbar {
+    height: 8px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb {
+    background-color: var(--bs-danger);
+    border-radius: 10px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb:hover {
+    background-color: #a81f23;
+}
+
+/* 📌 Ajuste del texto dentro de la tabla */
+.table td,
+.table th {
+    color: var(--bs-dark);
+}
+
+/* ✨ Estilo para badges dentro de tablas */
+.table .badge {
+    font-size: 0.85rem;
+    padding: 0.45em 0.7em;
+    border-radius: 0.4rem;
+}
+
+/* 📱 Mensaje flotante de ayuda en móviles */
+.scroll-hint {
+    display: none;
+    background: var(--bs-primary);
+    color: var(--bs-light);
+    text-align: center;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    animation: slideIn 0.6s ease forwards, fadeOut 6s ease forwards 4s;
+}
+
+/* ✨ Animación de entrada y salida */
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        display: none;
+    }
+}
+
+/* 📱 Mostrar solo en pantallas pequeñas */
+@media (max-width: 768px) {
+    .scroll-hint {
+        display: block;
     }
 }
