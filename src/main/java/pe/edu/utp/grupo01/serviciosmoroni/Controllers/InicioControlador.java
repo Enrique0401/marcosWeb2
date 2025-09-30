@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class InicioControlador {
 
-    @GetMapping({ "/inicio", "/" })
+    @GetMapping({ "/inicio", "/" , ""})
     public String index(Model model) {
         model.addAttribute("currentPage", "inicio");
         return "index";
@@ -73,12 +73,9 @@ public class InicioControlador {
         return "incidencias";
     }
 
-    @GetMapping({ "/perfil", "/" })
+    @GetMapping({ "/perfil", "/", "" })
     public String perfil(Model model) {
-        // Indica qué página está activa (si lo usas en el header, por ejemplo)
         model.addAttribute("currentPage", "perfil");
-
-        // Ya no necesitamos agregar "usuario" ni nada más
-        return "perfil"; // Esto devuelve la vista perfil.html
+        return "perfil"; 
     }
 }
